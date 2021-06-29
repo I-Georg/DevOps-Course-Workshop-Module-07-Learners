@@ -7,3 +7,8 @@ jobs:
     runs-on: ubuntu-latest # Sets the build environment a machine with the latest Ubuntu installed
     steps:
       - uses: actions/checkout@v2 # Adds a step to checkout the repository code
+      - name: Restore, Build, test, and pack
+        uses: Elskom/build-dotnet@main
+        with:
+          TEST: true
+          PACK: false
