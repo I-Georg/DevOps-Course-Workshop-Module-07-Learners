@@ -12,9 +12,15 @@ jobs:
         with:
           TEST: true
           PACK: false
-      - name: Setup Node.js
-        uses: actions/setup-node@v2.1.4
-        with:
-          node-version: 12
-      - name: Build and push
-        uses: alexthemaster/action-build-typescript@v.1.2.1
+      - name: Typescript
+        run: npm install
+          npm run build
+        working directory: ./DotnetTemplate.Web
+
+      - name: Typescript test
+        run: npm t
+        working directory: ./DotnetTemplate.Web
+
+      - name: linter
+        run: npm run lint
+        working directory: ./DotnetTemplate.Web
