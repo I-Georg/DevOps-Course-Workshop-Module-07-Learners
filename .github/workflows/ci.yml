@@ -15,12 +15,12 @@ jobs:
       - name: Typescript
         run: npm install
           npm run build
-        working directory: ./DotnetTemplate.Web
+        working-directory: ./DotnetTemplate.Web
 
       - name: Typescript test
         run: npm t
-        working directory: ./DotnetTemplate.Web
+        working-directory: ./DotnetTemplate.Web
 
       - name: linter
         run: npm run lint
-        working directory: ./DotnetTemplate.Web
+        working-directory: ./DotnetTemplate.Web
